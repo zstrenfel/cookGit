@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     plumber = require('gulp-plumber'),
     browserSync = require('browser-sync'),
+    debug = require('gulp-debug'),
     uglify = require('gulp-uglify');
 
 
@@ -60,14 +61,15 @@ gulp.task('sass', function() {
       }
     }))
     .pipe(sassGlob())
-    .pipe(sass({style: 'compressed'}))
+    .pipe(sass())
     .pipe(concat('bundle.css'))
     .pipe(plumber.stop())
-    .pipe(gulp.dest('./public/'))
+    .pipe(debug({title: 'sass'}))
+    .pipe(gulp.dest('./public'))
 });
 
 gulp.task('default', ['browser-sync', 'browserify'], function() {
-  gulp.watch('./assets/css/**/*.scss', ['sass']);
+  gulp.watch('./app/styles/**/*.scss', ['sass']);
 });
 
 //====== helper functions =====//

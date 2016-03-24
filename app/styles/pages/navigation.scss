@@ -1,0 +1,43 @@
+.top-nav {
+  @include span-columns(12);
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 40px;
+  background-color: $light-gray;
+  font-size: .9em;
+  text-align: right;
+
+  ul {
+    padding: 0;
+    margin-right: 10px;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 40px;
+
+    a {
+      color: $medium-gray;
+
+      &:hover {
+        color: darken($medium-gray, 20%);
+      }
+    }
+  }
+}
+
+.side-nav {
+  @include span-columns(2);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 100vh;
+  background-color: $dark-gray;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.3em;
+  font-weight: 200;
+}
+

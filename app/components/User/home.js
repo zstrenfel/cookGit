@@ -1,13 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 class Home extends React.Component {
   render() {
     return (
       <div className='home'>
-        Hello from Home Component
+        this is the home page
       </div>
     );
   }
 }
-
 export default Home;

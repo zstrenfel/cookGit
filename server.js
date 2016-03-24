@@ -3,11 +3,8 @@ var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-
-var React = require('react');
-var ReactDOM = require('react-dom/server');
-var Router = require('react-router');
 var app = express();
+
 
 app.set('port', process.env.PORT || 8000);
 app.use(logger('dev'));
