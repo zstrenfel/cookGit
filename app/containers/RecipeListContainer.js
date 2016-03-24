@@ -8,4 +8,5 @@ const mapStateToProps = (state) => {
 }
 
 const RecipeListContainer = connect(mapStateToProps)(RecipeList);
+
 export default RecipeListContainer

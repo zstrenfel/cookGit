@@ -6,7 +6,7 @@ import Home from '../app/components/User/home'
 import Settings from '../app/components/User/settings'
 
 
-const routes = (
+export default (
   <Route path="/" component={App}>
     <IndexRoute component={Dashboard} />
     <Route path="/dashboard" component={Dashboard}>
@@ -15,5 +15,3 @@ const routes = (
     </Route>
   </Route>
 );
-
-export default routes

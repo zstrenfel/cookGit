@@ -40,7 +40,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 gulp.task('nodemon', function(cb) {
   var started = false;
   return nodemon({
-    script:'./server.js',
+    script:'./index.js',
   })
     .on('start', function() {
       if (!started) {
