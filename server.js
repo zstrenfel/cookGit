@@ -9,9 +9,9 @@ import {renderToString} from 'react-dom/server'
 import {match, RouterContext} from "react-router"
 
 
-import routes from '../app/routes'
-import * as api from './api/http'
-import * as eventService from './api/service/event'
+import routes from './app/routes'
+import * as api from './server/api/http'
+import * as eventService from './server/api/service/event'
 
 const app = express();
 

@@ -2,7 +2,7 @@
 
 require('babel-register')({presets: [ 'es2015', 'react' ]});
 
-var app = require('./server/server');
+var app = require('./server');
 
 const PORT = process.env.PORT || 8000;
 app.default.listen(PORT, function () {
