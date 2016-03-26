@@ -1,3 +1,7 @@
+/**
+ * Idea taken from github/GordyD 3REE stack application tutorial
+ * https://github.com/GordyD/3ree
+ */
 import r from 'rethinkdb';
 import xss from 'xss'
 //xss prevents XSS attacks; usage --> xss(text_to_be_checked);

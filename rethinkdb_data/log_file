@@ -35,3 +35,30 @@
 2016-03-24T16:19:01.062087000 2.957821s notice: All client connections closed.
 2016-03-24T16:19:01.062099000 2.957833s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2016-03-24T16:19:01.062642000 2.958376s notice: Storage engine shut down.
+2016-03-26T09:13:21.309169000 0.474888s notice: Running rethinkdb 2.2.5 (CLANG 6.0 (clang-600.0.57))...
+2016-03-26T09:13:21.579338000 0.745084s notice: Running on Darwin 13.4.0 x86_64
+2016-03-26T09:13:21.579458000 0.745201s notice: Loading data from directory /Users/Zach/Desktop/cookgit/rethinkdb_data
+2016-03-26T09:13:21.859513000 1.025256s info: Automatically using cache size of 100 MB
+2016-03-26T09:13:21.859536000 1.025278s warn: Cache size does not leave much memory for server and query overhead (available memory: 1081 MB).
+2016-03-26T09:13:21.859551000 1.025293s warn: Cache size is very low and may impact performance.
+2016-03-26T09:13:21.879724000 1.045467s notice: Listening for intracluster connections on port 29015
+2016-03-26T09:13:21.888888000 1.054631s notice: Listening for client driver connections on port 28015
+2016-03-26T09:13:21.889161000 1.054903s notice: Listening for administrative HTTP connections on port 8080
+2016-03-26T09:13:21.889173000 1.054915s notice: Listening on addresses: 127.0.0.1, ::1
+2016-03-26T09:13:21.889175000 1.054917s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-03-26T09:13:21.889187000 1.054929s notice: Server ready, "airbears2_10_142_5_106_airbears2_1918_berkeley_edu_mnn" 848ffdeb-684c-4b02-8637-17caf8b1325c
+2016-03-26T09:17:06.619652000 225.792380s info: Table 5d2b5051-3bb7-4e81-a531-57fc83d33aaf: Added replica on this server.
+2016-03-26T09:17:06.672069000 225.844798s info: Table 4b885798-8043-495f-a74d-6a746399b161: Added replica on this server.
+2016-03-26T09:17:07.128164000 226.300893s info: Table 7af6b8f6-86c9-4070-a31a-efa21a4cdd06: Added replica on this server.
+2016-03-26T09:17:08.244243000 227.417002s info: Table 5d2b5051-3bb7-4e81-a531-57fc83d33aaf: Starting a new Raft election for term 1.
+2016-03-26T09:17:08.262666000 227.435426s info: Table 4b885798-8043-495f-a74d-6a746399b161: Starting a new Raft election for term 1.
+2016-03-26T09:17:08.374802000 227.547562s info: Table 7af6b8f6-86c9-4070-a31a-efa21a4cdd06: Starting a new Raft election for term 1.
+2016-03-26T09:17:08.500244000 227.673036s info: Table 5d2b5051-3bb7-4e81-a531-57fc83d33aaf: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T09:17:08.789538000 227.962329s info: Table 4b885798-8043-495f-a74d-6a746399b161: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T09:17:08.934757000 228.107548s info: Table 7af6b8f6-86c9-4070-a31a-efa21a4cdd06: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T09:17:51.631132000 270.805257s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/4b885798-8043-495f-a74d-6a746399b161
+2016-03-26T09:17:51.631144000 270.805269s info: Table 4b885798-8043-495f-a74d-6a746399b161: Deleted the table.
+2016-03-26T09:17:51.980242000 271.154367s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/5d2b5051-3bb7-4e81-a531-57fc83d33aaf
+2016-03-26T09:17:51.980259000 271.154385s info: Table 5d2b5051-3bb7-4e81-a531-57fc83d33aaf: Deleted the table.
+2016-03-26T09:17:52.182415000 271.356541s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/7af6b8f6-86c9-4070-a31a-efa21a4cdd06
+2016-03-26T09:17:52.182434000 271.356559s info: Table 7af6b8f6-86c9-4070-a31a-efa21a4cdd06: Deleted the table.

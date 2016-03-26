@@ -33,7 +33,8 @@ node_modules
 .node_repl_history
 
 # dist
-public/
+public/bundle.css
+public/bundle.js
 
 # rethinkdb
 rethinkdb_data/

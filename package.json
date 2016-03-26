@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register --recursive",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "db-setup": "node dbSetup.js",
+    "db-takedown": "node dbTakedown.js"
   },
   "keywords": [
     "swag"

@@ -1,3 +1,7 @@
+/**
+ * Idea taken from github/GordyD 3REE stack application tutorial
+ * https://github.com/GordyD/3ree
+ */
 import * as service from './service/event';
 
 export function getRecipes(req, res) {
