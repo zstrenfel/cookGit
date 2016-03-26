@@ -1,11 +1,11 @@
 import React from 'react'
-import RecipeList from '../../containers/RecipeListContainer'
+import RecipeListContainer from '../../containers/RecipeListContainer'
 
 const SideNav = () => {
     return (
       <div className='side-nav'>
             <h1>Recipes</h1>
-            <RecipeList />
+            <RecipeListContainer />
       </div>
     )
 }

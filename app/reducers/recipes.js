@@ -15,6 +15,7 @@ const recipe = (state, action) => {
 
     //   }
     default:
+      console.log('default ', state);
       return state;
   }
 }
@@ -36,6 +37,7 @@ const recipes = (state = [], action) => {
     //   console.log('delete recipe');
     //   return state
     default:
+      console.log('default ', state);
       return state
   }
 }

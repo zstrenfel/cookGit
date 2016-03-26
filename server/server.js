@@ -1,15 +1,19 @@
+// es6 server file transpiled by babel in index.js in root.
 import express from 'express'
 import path from 'path'
+
 import logger from 'morgan'
 import bodyParser from 'body-parser'
-
-
-const app = express();
-
-import routes from './app/routes'
 import React from 'react'
 import {renderToString} from 'react-dom/server'
 import {match, RouterContext} from "react-router"
+
+
+import routes from '../app/routes'
+import * as api from './api/http'
+import * as eventService from './api/service/event'
+
+const app = express();
 
 app.set('port', process.env.PORT || 8000);
 app.use(logger('dev'));
@@ -18,9 +22,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// maybe if i set routes here they will be routed to the api first
+// API calls
+app.get('/api/recipes', api.getRecipes);
+app.post('/api/recipes', api.newRecipe);
+app.post('/api/recipes/:id', api.editRecipe);
+app.delete('/api/recipes/:id', api.deleteRecipe);
 
-//Uses Routes to apply the correct view to url
+//React Router
 app.get('*', (req, res) => {
   const location = req.url;
   match({routes, location}, (error, redirectLocation, renderProps) => {

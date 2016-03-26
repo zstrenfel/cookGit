@@ -1,5 +1,5 @@
 import React from 'react'
-import { addRecipe } from '../actions'
+import { addRecipe } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
 
 let AddRecipe = ({ dispatch }) => {

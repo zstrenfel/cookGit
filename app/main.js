@@ -6,12 +6,12 @@ import { createStore } from 'redux'
 import routes from './routes'
 import cookApp from './reducers/index'
 
-let store = createStore(cookApp)
+let store = createStore(cookApp);
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
-      {routes}
+    <Router history={browserHistory} routes={routes}>
     </Router>
   </Provider>,
   document.getElementById('app')

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const RecipeList = ({ recipes }) => {
+let RecipeList = ({ recipes }) => {
   return (
     <ul>
       {
@@ -11,5 +11,6 @@ const RecipeList = ({ recipes }) => {
     </ul>
   )
 }
+
 
 export default RecipeList;
