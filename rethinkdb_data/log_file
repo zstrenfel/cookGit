@@ -62,3 +62,27 @@
 2016-03-26T09:17:51.980259000 271.154385s info: Table 5d2b5051-3bb7-4e81-a531-57fc83d33aaf: Deleted the table.
 2016-03-26T09:17:52.182415000 271.356541s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/7af6b8f6-86c9-4070-a31a-efa21a4cdd06
 2016-03-26T09:17:52.182434000 271.356559s info: Table 7af6b8f6-86c9-4070-a31a-efa21a4cdd06: Deleted the table.
+2016-03-26T10:20:18.960424000 4014.364937s info: Table b85bbaa3-5398-498f-90ea-1906f0f48e33: Added replica on this server.
+2016-03-26T10:20:19.432064000 4014.836577s info: Table 944a9c8a-f3bf-4950-830f-d8c00ee22c2f: Added replica on this server.
+2016-03-26T10:20:19.853700000 4015.258213s info: Table 2aba3461-d550-4949-9776-ab966c0e9719: Added replica on this server.
+2016-03-26T10:20:20.266365000 4015.670877s info: Table b85bbaa3-5398-498f-90ea-1906f0f48e33: Starting a new Raft election for term 1.
+2016-03-26T10:20:20.452343000 4015.856855s info: Table b85bbaa3-5398-498f-90ea-1906f0f48e33: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T10:20:21.148799000 4016.553312s info: Table 944a9c8a-f3bf-4950-830f-d8c00ee22c2f: Starting a new Raft election for term 1.
+2016-03-26T10:20:21.480304000 4016.884818s info: Table 2aba3461-d550-4949-9776-ab966c0e9719: Starting a new Raft election for term 1.
+2016-03-26T10:20:22.197810000 4017.602324s info: Table 944a9c8a-f3bf-4950-830f-d8c00ee22c2f: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T10:20:22.708919000 4018.113432s info: Table 2aba3461-d550-4949-9776-ab966c0e9719: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T10:20:55.761871000 4051.167314s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/2aba3461-d550-4949-9776-ab966c0e9719
+2016-03-26T10:20:55.761882000 4051.167324s info: Table 2aba3461-d550-4949-9776-ab966c0e9719: Deleted the table.
+2016-03-26T10:20:56.551028000 4051.956471s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/944a9c8a-f3bf-4950-830f-d8c00ee22c2f
+2016-03-26T10:20:56.551046000 4051.956489s info: Table 944a9c8a-f3bf-4950-830f-d8c00ee22c2f: Deleted the table.
+2016-03-26T10:20:56.785239000 4052.190682s notice: Removing file /Users/Zach/Desktop/cookgit/rethinkdb_data/b85bbaa3-5398-498f-90ea-1906f0f48e33
+2016-03-26T10:20:56.785256000 4052.190699s info: Table b85bbaa3-5398-498f-90ea-1906f0f48e33: Deleted the table.
+2016-03-26T10:21:18.346319000 4073.752693s info: Table 610a6331-9b14-4d55-a32f-459b63c5bfb4: Added replica on this server.
+2016-03-26T10:21:18.466797000 4073.873171s info: Table c63c06c8-c24a-4df4-b614-329bf246d36a: Added replica on this server.
+2016-03-26T10:21:19.411523000 4074.817897s info: Table c51a255a-b94a-417b-8a39-a507d6ed1748: Added replica on this server.
+2016-03-26T10:21:19.558109000 4074.964484s info: Table 610a6331-9b14-4d55-a32f-459b63c5bfb4: Starting a new Raft election for term 1.
+2016-03-26T10:21:19.804712000 4075.211086s info: Table c63c06c8-c24a-4df4-b614-329bf246d36a: Starting a new Raft election for term 1.
+2016-03-26T10:21:20.231875000 4075.638249s info: Table 610a6331-9b14-4d55-a32f-459b63c5bfb4: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T10:21:20.366729000 4075.773103s info: Table c63c06c8-c24a-4df4-b614-329bf246d36a: This server is Raft leader for term 1. Latest log index is 0.
+2016-03-26T10:21:20.612160000 4076.018534s info: Table c51a255a-b94a-417b-8a39-a507d6ed1748: Starting a new Raft election for term 1.
+2016-03-26T10:21:21.719992000 4077.126366s info: Table c51a255a-b94a-417b-8a39-a507d6ed1748: This server is Raft leader for term 1. Latest log index is 0.

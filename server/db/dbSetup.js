@@ -6,7 +6,7 @@
 import r from 'rethinkdb'
 
 let DATABASE = 'CookApp';
-let TABLES = ['resipes', 'users', 'comments'];
+let TABLES = ['recipes', 'users', 'comments'];
 
 r.connect({db: DATABASE})
   .then(conn => {

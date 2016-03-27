@@ -8,3 +8,26 @@ export const addRecipe = (title, body) => {
     body
   }
 }
+
+export const addField = (id, text = "") => {
+  console.log("id", id);
+  return {
+    type: 'ADD_FIELD',
+    id,
+    text
+  }
+}
+
+export const fieldChange = (text, id) => {
+  return {
+    type: 'FIELD_CHANGE',
+    id,
+    text
+  }
+}
+
+export const resetField = () => {
+  return {
+    type: 'RESET_FIELDS'
+  }
+}

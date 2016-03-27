@@ -5,9 +5,10 @@
 import r from 'rethinkdb';
 import xss from 'xss'
 //xss prevents XSS attacks; usage --> xss(text_to_be_checked);
+let DATABASE = 'CookApp'
 
 function connect() {
-  return r.connect();
+  return r.connect({db: DATABASE});
 }
 
 export function getRecipes() {

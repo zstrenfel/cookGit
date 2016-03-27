@@ -1,0 +1,30 @@
+state = {
+  fields: (int),
+  recipes: [
+     {
+      id: (int),
+      title: ...,
+      body: {
+        "1": "...",
+        "2": "..."
+      },
+      owner: (int id),
+      tags: ["...", "..."],
+      date_create: date,
+      date_updated: date,
+      comments [
+        {
+          body: '...',
+          owner: '...',
+          'date_created': date,
+          'date_updated': date
+        }
+      ]
+    }
+  ],
+  user: {
+    username: "...",
+    admin: false
+  }
+
+}
