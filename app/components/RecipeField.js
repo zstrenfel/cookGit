@@ -1,21 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 
-class RecipeField extends Component {
-  constructor(props) {
-    super(props);
-  }
 
-  onFieldChange(e) {
-    console.log(e.target.value);
-    this.context.change(e.target.value, e.target.dataset.index );
-  }
-
-  render() {
-    return (
-      <textarea onChange={this.onFieldChange.bind(this)} data-index={this.props['data-index']} value={this.props.text} />
-    )
-  }
+const RecipeField = ({ onChange, id, text }) => {
+  return (
+    <textarea onChange={onChange} data-index={id} value={text} />
+  )
 }
-RecipeField.contextTypes = {change: PropTypes.func};
+
 export default RecipeField;

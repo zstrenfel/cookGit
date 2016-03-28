@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import { addRecipe, addField, resetField, fieldChange } from '../actions/RecipeActions'
+import { addRecipe, addField, resetFields, fieldChange } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
 import RecipeField from "../components/RecipeField"
+import FieldContainer from './FieldContainer'
 
 const mapStateToProps = (state) => {
   console.log('state', state);
@@ -16,21 +17,6 @@ class AddRecipe extends Component {
     super(props);
   }
 
-  getChildContext() {
-    return {change: this.onFieldChange.bind(this)}
-  }
-
-  onFieldChange(text, index) {
-    const { dispatch } = this.props;
-    dispatch(fieldChange(text, index));
-  }
-
-  getFields(fields) {
-    return Object.keys(fields).map((key) => {
-      return <RecipeField text={fields[key]} key={key} data-index={key} />
-    })
-  }
-
   render() {
     const { fields, dispatch, count } = this.props;
     let title,
@@ -40,16 +26,13 @@ class AddRecipe extends Component {
       <div>
         <form onSubmit={e => {
           e.preventDefault();
-          if (title.value === "") { return }
-          title = title.value;
-          dispatch(addRecipe(title, "hooply"));
-          title = '';
+          dispatch(addRecipe(fields));
+          dispatch(resetFields());
+          console.log('here', title);
+          title.value = '';
           }
         }>
-          <input ref={node => {title = node}} />
-          <div className='instructions'>
-            {nodes}
-          </div>
+          <FieldContainer />
           <a onClick={ () => { dispatch(addField(index)) }} > Add Instruction </a>
           <button type='submit'> Create Recipe </button>
         </form>
@@ -58,9 +41,6 @@ class AddRecipe extends Component {
 
   }
 }
-
-AddRecipe.childContextTypes = { change: PropTypes.func };
-// AddRecipe.childContextTypes({change: PropTypes.func})
 
 AddRecipe = connect(mapStateToProps)(AddRecipe);
 export default AddRecipe;

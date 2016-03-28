@@ -1,5 +1,5 @@
 state = {
-  fields: (int),
+  current_recipe: {title: , fields: {}},
   recipes: [
      {
       id: (int),

@@ -26,7 +26,7 @@ export const fieldChange = (text, id) => {
   }
 }
 
-export const resetField = () => {
+export const resetFields = () => {
   return {
     type: 'RESET_FIELDS'
   }
