@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { addRecipe, addField, resetFields, fieldChange } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
-import RecipeField from "../components/RecipeField"
+import RecipeField from "../components/Recipe/RecipeField"
 import FieldContainer from './FieldContainer'
 
 const mapStateToProps = (state) => {

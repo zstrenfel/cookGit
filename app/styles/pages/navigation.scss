@@ -7,6 +7,8 @@
   border-bottom: $base-border;
   font-size: .9em;
   text-align: right;
+  background-color: #fff;
+  z-index: 2;
 
   ul {
     padding: 0;
@@ -30,12 +32,12 @@
 
 .side-nav {
   @include span-columns(2);
-  position: absolute;
-  top: 40px;
+  position: fixed;
+  top: 0;
+  padding: 60px 20px 20px;
   right: 0;
   height: 100vh;
   border-left: $base-border;
-  padding: 20px;
   font-size: 1.3em;
   font-weight: 200;
 }

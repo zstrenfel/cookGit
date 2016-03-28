@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import RecipeList from '../components/RecipeList'
+import RecipeList from '../components/Recipe/RecipeList'
 
 const mapStateToProps = (state) => {
   return {

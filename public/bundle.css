@@ -236,7 +236,9 @@ html, body {
   height: 40px;
   border-bottom: 1px solid #ddd;
   font-size: .9em;
-  text-align: right; }
+  text-align: right;
+  background-color: #fff;
+  z-index: 2; }
   .top-nav:last-child {
     margin-right: 0; }
   .top-nav ul {
@@ -256,12 +258,12 @@ html, body {
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  position: absolute;
-  top: 40px;
+  position: fixed;
+  top: 0;
+  padding: 60px 20px 20px;
   right: 0;
   height: 100vh;
   border-left: 1px solid #ddd;
-  padding: 20px;
   font-size: 1.3em;
   font-weight: 200; }
   .side-nav:last-child {

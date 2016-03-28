@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import FieldList from '../components/FieldList'
+import FieldList from '../components/Recipe/FieldList'
 import { fieldChange } from '../actions/RecipeActions'
 
 const mapStateToProps = (state) => {
