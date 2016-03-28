@@ -5,7 +5,7 @@ const TopNav = () => {
       return (
         <div className='top-nav'>
           <ul>
-            <li><Link to="/dashboard">Recipes</Link></li>
+            <li><Link to="/recipe/create">New Recipe</Link></li>
             <li><Link to="/user/home">Profile</Link></li>
             <li><Link to="/user/settings">Settings</Link></li>
             <li><Link to="/">Logout</Link></li>

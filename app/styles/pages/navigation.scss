@@ -4,7 +4,7 @@
   left: 0;
   position: absolute;
   height: 40px;
-  background-color: $light-gray;
+  border-bottom: $base-border;
   font-size: .9em;
   text-align: right;
 
@@ -32,10 +32,9 @@
   @include span-columns(2);
   position: absolute;
   top: 40px;
-  left: 0;
+  right: 0;
   height: 100vh;
-  background-color: $dark-gray;
-  color: #fff;
+  border-left: $base-border;
   padding: 20px;
   font-size: 1.3em;
   font-weight: 200;

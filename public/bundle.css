@@ -186,8 +186,7 @@ html, body {
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align: baseline;
-  background-color: #F3F3F3; }
+  vertical-align: baseline; }
 
 .container {
   max-width: 100%;
@@ -204,10 +203,27 @@ html, body {
   display: block;
   margin-right: 2.35765%;
   width: 82.94039%;
-  margin-left: 17.05961%;
   margin-top: 60px; }
   .content:last-child {
     margin-right: 0; }
+
+.create {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  border: 2px solid #f7f7f7;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center; }
+  .create:last-child {
+    margin-right: 0; }
+  .create a {
+    font-size: .8em;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px; }
 
 .top-nav {
   float: left;
@@ -218,7 +234,7 @@ html, body {
   left: 0;
   position: absolute;
   height: 40px;
-  background-color: #ddd;
+  border-bottom: 1px solid #ddd;
   font-size: .9em;
   text-align: right; }
   .top-nav:last-child {
@@ -242,10 +258,9 @@ html, body {
   width: 14.70196%;
   position: absolute;
   top: 40px;
-  left: 0;
+  right: 0;
   height: 100vh;
-  background-color: #333;
-  color: #fff;
+  border-left: 1px solid #ddd;
   padding: 20px;
   font-size: 1.3em;
   font-weight: 200; }

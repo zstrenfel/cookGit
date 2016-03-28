@@ -8,11 +8,10 @@ class Dash extends React.Component {
     return (
       <div className='dashboard'>
         <TopNav />
-        <SideNav />
         <div className="content">
-          <AddRecipe />
           {this.props.children}
         </div>
+        <SideNav />
       </div>
     );
   }

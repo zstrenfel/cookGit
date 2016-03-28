@@ -18,7 +18,7 @@ export const addField = (id, text = "") => {
   }
 }
 
-export const fieldChange = (text, id) => {
+export const fieldChange = (id, text) => {
   return {
     type: 'FIELD_CHANGE',
     id,

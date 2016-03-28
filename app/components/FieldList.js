@@ -3,11 +3,20 @@ import RecipeField from './RecipeField';
 
 
 
-let FieldList = ({ fields, onChange }) => {
+let FieldList = ({ fields, onFieldChange }) => {
+  console.log(fields);
   return (
-    fields.map((field) => {
-      <RecipeField onChange={(e) => {onFieldChange(field.id, e.target.value)}} data-id={field.id} value={field.text} />
-    })
+    <div className="instructions">
+    {
+      Object.keys(fields).map((key) => {
+        console.log(key);
+          return <RecipeField onChange={(e) => {
+            console.log(e.target.value, key)
+            onFieldChange(key, e.target.value)
+          }} key={key} id={key} text={fields[key]} />
+        })
+    }
+    </div>
   )
 }
 

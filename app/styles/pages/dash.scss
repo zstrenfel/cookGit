@@ -1,5 +1,20 @@
 .content {
   @include span-columns(10);
-  @include shift(2);
   margin-top: 60px;
+}
+
+.create {
+  @include span-columns(8);
+  @include shift(2);
+  border: 2px solid lighten($light-gray, 10%);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+
+  a {
+    font-size: .8em;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
 }

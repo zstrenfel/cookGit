@@ -18,22 +18,22 @@ class AddRecipe extends Component {
   }
 
   render() {
-    const { fields, dispatch, count } = this.props;
+    const { fields, dispatch } = this.props;
     let title,
-        nodes = this.getFields(fields),
         index = Object.keys(fields).length > 0 ? Object.keys(fields).length + 1 : 1;
     return (
-      <div>
+      <div className="create">
+        <h1> Create Recipe </h1>
         <form onSubmit={e => {
           e.preventDefault();
-          dispatch(addRecipe(fields));
+          dispatch(addRecipe(title.value, fields));
           dispatch(resetFields());
-          console.log('here', title);
           title.value = '';
           }
         }>
+          <input ref={node => {title = node}} />
           <FieldContainer />
-          <a onClick={ () => { dispatch(addField(index)) }} > Add Instruction </a>
+          <a onClick={ () => { dispatch(addField(index)) }} > Add Another Instruction Field </a>
           <button type='submit'> Create Recipe </button>
         </form>
       </div>

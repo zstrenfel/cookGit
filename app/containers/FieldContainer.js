@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import FieldList from '../components/FieldList'
+import { fieldChange } from '../actions/RecipeActions'
 
 const mapStateToProps = (state) => {
   return {
@@ -9,12 +10,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFieldChange: (vars) => {
-      dispatch(fieldChange(id, text))
+    onFieldChange: (id, text) => {
+      dispatch( fieldChange(id, text) )
     }
   }
 }
 
-const RecipeListContainer = connect(mapStateToProps)(RecipeList);
+const FieldContainer = connect(mapStateToProps, mapDispatchToProps)(FieldList);
 
-export default RecipeListContainer
+export default FieldContainer
