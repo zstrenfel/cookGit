@@ -22,7 +22,6 @@ const recipe = (state, action) => {
 const recipes = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_NEW_RECIPE':
-    console.log(state);
       return [
         ...state,
         recipe(undefined, action)

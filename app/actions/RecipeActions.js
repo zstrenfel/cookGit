@@ -9,25 +9,39 @@ export const addRecipe = (title, body) => {
   }
 }
 
-export const addField = (id, text = "") => {
+export const addInstruction = (id, text = "") => {
   console.log("id", id);
   return {
-    type: 'ADD_FIELD',
+    type: 'ADD_INSTRUCTION',
     id,
     text
   }
 }
 
-export const fieldChange = (id, text) => {
+export const instructionChange = (id, text) => {
+  return {
+    type: 'INSTRUCTION_CHANGE',
+    id,
+    text
+  }
+}
+
+export const resetInstructions = () => {
+  return {
+    type: 'RESET_INSTRUCTIONS'
+  }
+}
+
+export const titleChange = (label, text) => {
   return {
     type: 'FIELD_CHANGE',
-    id,
+    label,
     text
   }
 }
 
-export const resetFields = () => {
+export const resetTitle = () => {
   return {
-    type: 'RESET_FIELDS'
+    type: 'RESET_INSTRUCTIONS'
   }
 }

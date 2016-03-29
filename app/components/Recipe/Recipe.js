@@ -8,4 +8,4 @@ const Recipe = ({ onClick, id }) => {
   )
 }
 
-export default RecipeField;
+export default Recipe;

@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
-import { addRecipe, addField, resetFields, fieldChange } from '../actions/RecipeActions'
+import { addRecipe, addInstruction, resetInstructions, instructionChange } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
-import RecipeField from "../components/Recipe/RecipeField"
-import FieldContainer from './FieldContainer'
+import RecipeTextArea from "../components/Recipe/RecipeTextArea"
+import InstructionContainer from './InstructionContainer'
+import TitleContainer from './TitleContainer'
 
 const mapStateToProps = (state) => {
-  console.log('state', state);
   return {
-    fields: state.fields
+    instructions: state.instructions
   }
 }
 
@@ -18,22 +18,23 @@ class AddRecipe extends Component {
   }
 
   render() {
-    const { fields, dispatch } = this.props;
+    const { instructions, dispatch } = this.props;
     let title,
-        index = Object.keys(fields).length > 0 ? Object.keys(fields).length + 1 : 1;
+        index = Object.keys(instructions).length > 0 ? Object.keys(instructions).length + 1 : 1;
     return (
       <div className="create">
         <h1> Create Recipe </h1>
         <form onSubmit={e => {
           e.preventDefault();
-          dispatch(addRecipe(title.value, fields));
-          dispatch(resetFields());
+          dispatch(addRecipe(title.value, instructions));
+          dispatch(resetInstructions());
           title.value = '';
           }
         }>
           <input ref={node => {title = node}} />
-          <FieldContainer />
-          <a onClick={ () => { dispatch(addField(index)) }} > Add Another Instruction Field </a>
+          <TitleContainer />
+          <InstructionContainer />
+          <a onClick={ () => { dispatch(addInstruction(index)) }} > Add Another Instruction Field </a>
           <button type='submit'> Create Recipe </button>
         </form>
       </div>

@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import recipes from './recipes'
-import fields from './fields'
+import instructions from './instructions'
+import title from './title'
 
 const cookApp = combineReducers({
   recipes,
-  fields
+  instructions,
+  title
 })
 
 export default cookApp

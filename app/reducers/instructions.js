@@ -1,21 +1,21 @@
 
 let initialState = {"1":""};
 
-const fields = (state = initialState, action) => {
+const instructions = (state = initialState, action) => {
   switch(action.type) {
-    case 'ADD_FIELD':
+    case 'ADD_INSTRUCTION':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'FIELD_CHANGE':
+    case 'INSTRUCTION_CHANGE':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'RESET_FIELDS':
+    case 'RESET_INSTRUCTIONS':
       return initialState;
     default:
       return state;
   }
 }
 
-export default fields;
+export default instructions;
