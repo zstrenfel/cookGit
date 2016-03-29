@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RecipeInput = ({ onChange, label, text }) => {
+const RecipeInput = ({ onChange, label, value }) => {
   return (
-    <input onChange={onChange} value={text} data-label={label} />
+    <input onChange={onChange} value={value} data-label={label} />
   )
 }
 

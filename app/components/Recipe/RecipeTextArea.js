@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RecipeTextArea = ({ onChange, label, text }) => {
+const RecipeTextArea = ({ onChange, label, value }) => {
   return (
-    <textarea onChange={onChange} data-label={label} value={text} />
+    <textarea onChange={onChange} data-label={label} value={value} />
   )
 }
 

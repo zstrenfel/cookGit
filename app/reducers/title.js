@@ -7,7 +7,8 @@ const title = (state = initialState, action) => {
       return Object.assign({}, state, {
         [action.label]: action.text
       })
-    case 'RESET_INSTRUCTIONS':
+    case 'RESET_TITLE':
+      console.log('really resettiung state noe');
       return initialState;
     default:
       return state;

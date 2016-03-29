@@ -21,10 +21,11 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 let TitleContainer = ({ title, onTitleChange }) => {
+  console.log(title);
   return (
     <div className="recipe-title">
-      <RecipeInput onChange={ onTitleChange } value={ title.title} data-label={"title"} />
-      <RecipeTextArea onChange={ onTitleChange } value={ title.description } data-label={"description"} />
+      <RecipeInput onChange={ (e) => onTitleChange('title', e.target.value) } value={ title.title } label={"title"} />
+      <RecipeTextArea onChange={ (e) => onTitleChange('description', e.target.value) } value={ title.description } label={"description"} />
     </div>
   )
 }

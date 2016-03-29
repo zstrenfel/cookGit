@@ -11,7 +11,7 @@ let InstructionList = ({ instructions, onInstructionChange }) => {
         console.log(key);
           return <RecipeTextArea onChange={(e) => {
             onInstructionChange(key, e.target.value)
-          }} key={key} id={key} text={instructions[key]} />
+          }} key={key} label={key} value={instructions[key]} />
         })
     }
     </div>

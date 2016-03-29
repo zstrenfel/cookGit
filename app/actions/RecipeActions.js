@@ -41,7 +41,8 @@ export const titleChange = (label, text) => {
 }
 
 export const resetTitle = () => {
+  console.log('resetting title');
   return {
-    type: 'RESET_INSTRUCTIONS'
+    type: 'RESET_TITLE'
   }
 }
