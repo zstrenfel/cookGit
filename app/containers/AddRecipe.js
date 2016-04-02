@@ -1,14 +1,27 @@
 import React, { Component, PropTypes } from 'react'
-import { addRecipe, addInstruction, resetInstructions, instructionChange, resetTitle } from '../actions/RecipeActions'
+import {
+        addRecipe,
+        addInstruction,
+        addIngredient,
+        resetInstructions,
+        instructionChange,
+        resetTitle,
+        resetUnits,
+        addUnit
+      } from '../actions/RecipeActions'
 import { connect } from 'react-redux'
 import RecipeTextArea from "../components/Recipe/RecipeTextArea"
-import InstructionContainer from './InstructionContainer'
+import InstructionsContainer from './InstructionsContainer'
 import TitleContainer from './TitleContainer'
+import IngredientContainer from './IngredientContainer'
 
 const mapStateToProps = (state) => {
+  console.log('state', state);
   return {
     title: state.title,
-    instructions: state.instructions
+    instructions: state.instructions,
+    ingredients: state.ingredients,
+    units: state.units
   }
 }
 
@@ -19,8 +32,9 @@ class AddRecipe extends Component {
   }
 
   render() {
-    const { title, instructions, dispatch } = this.props;
-    let index = Object.keys(instructions).length > 0 ? Object.keys(instructions).length + 1 : 1;
+    const { dispatch, title, instructions, units, ingredients } = this.props;
+    let instructionIndex = Object.keys(instructions).length + 1,
+        ingredientIndex = Object.keys(ingredients).length + 1;
     return (
       <div className="create">
         <h1> Create Recipe </h1>
@@ -29,12 +43,23 @@ class AddRecipe extends Component {
           dispatch(addRecipe(title.title, instructions));
           dispatch(resetInstructions());
           dispatch(resetTitle());
+          dispatch(resetUnits());
           title.value = '';
           }
         }>
           <TitleContainer />
-          <InstructionContainer />
-          <a onClick={ () => { dispatch(addInstruction(index)) }} > Add Another Instruction Field </a>
+          <IngredientContainer />
+          <a onClick={ () => {
+              console.log('clicked');
+              dispatch(addIngredient(ingredientIndex));
+              dispatch(addUnit(ingredientIndex))
+          }} >
+            Add Another Ingredient
+          </a>
+          <InstructionsContainer />
+          <a onClick={ () => { dispatch(addInstruction(instructionIndex)) }} >
+            Add Another Instruction Field
+          </a>
           <button type='submit'> Create Recipe </button>
         </form>
       </div>

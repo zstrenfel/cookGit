@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const InstructionContainer = connect(mapStateToProps, mapDispatchToProps)(InstructionList);
+const InstructionsContainer = connect(mapStateToProps, mapDispatchToProps)(InstructionList);
 
-export default InstructionContainer
+export default InstructionsContainer
+

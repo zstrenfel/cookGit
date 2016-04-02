@@ -4,15 +4,26 @@ import RecipeTextArea from './RecipeTextArea';
 
 
 let InstructionList = ({ instructions, onInstructionChange }) => {
+  console.log('instructions', instructions);
   return (
     <div className="instructions">
+    <label> Instructions </label>
     {
       Object.keys(instructions).map((key) => {
-        console.log(key);
-          return <RecipeTextArea onChange={(e) => {
-            onInstructionChange(key, e.target.value)
-          }} key={key} label={key} value={instructions[key]} />
-        })
+          return (
+            <div className='instruction'>
+            <div className="instruction-num">
+              {key}.
+            </div>
+            <RecipeTextArea
+              onChange={(e) => { onInstructionChange(key, e.target.value)}}
+              key={key}
+              label={key}
+              value={instructions[key]}
+            />
+          </div>
+
+        )})
     }
     </div>
   )

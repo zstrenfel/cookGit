@@ -10,7 +10,6 @@ export const addRecipe = (title, body) => {
 }
 
 export const addInstruction = (id, text = "") => {
-  console.log("id", id);
   return {
     type: 'ADD_INSTRUCTION',
     id,
@@ -46,3 +45,45 @@ export const resetTitle = () => {
     type: 'RESET_TITLE'
   }
 }
+
+export const ingredientChange = (id, text) => {
+  return {
+    type: 'INGREDIENT_CHANGE',
+    id,
+    text
+  }
+}
+
+export const addIngredient = (id, text="") => {
+  console.log('add ingredient called');
+  return {
+    type: 'ADD_INGREDIENT',
+    id,
+    text
+  }
+}
+
+export const unitChange = (id, text) => {
+  return {
+    type: 'UNIT_CHANGE',
+    id,
+    text
+  }
+}
+
+export const addUnit = (id, text="") => {
+  return {
+    type: 'ADD_UNIT',
+    id,
+    text
+  }
+}
+
+export const resetUnits = () => {
+  return {
+    type: 'RESET_UNITS'
+  }
+}
+
+
+

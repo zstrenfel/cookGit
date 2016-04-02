@@ -198,6 +198,70 @@ html, body {
     content: "";
     display: table; }
 
+.form-styles, .create input, .create textarea {
+  border-radius: 0;
+  color: #595959; }
+
+label {
+  color: #999;
+  font-weight: 400;
+  font-size: .9em; }
+
+.create form {
+  text-align: left; }
+
+.create a {
+  text-align: right; }
+
+/** Ingredient Styles */
+input.ingredient-input.unit {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  input.ingredient-input.unit:last-child {
+    margin-right: 0; }
+
+input.ingredient-input.value {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  input.ingredient-input.value:last-child {
+    margin-right: 0; }
+
+/** Instruction Styles */
+.instructions .instruction {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  overflow: auto;
+  height: auto; }
+  .instructions .instruction:last-child {
+    margin-right: 0; }
+
+.instructions .instruction-num {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%;
+  font-size: 1em;
+  font-weight: 300;
+  color: #999;
+  text-align: right;
+  padding: 0 10px 10px 0; }
+  .instructions .instruction-num:last-child {
+    margin-right: 0; }
+
+.instructions textarea {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 91.4702%; }
+  .instructions textarea:last-child {
+    margin-right: 0; }
+
 .content {
   float: left;
   display: block;

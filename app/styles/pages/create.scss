@@ -1,0 +1,47 @@
+.create {
+  input, textarea {
+    @extend .form-styles;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  a {
+    text-align: right;
+  }
+}
+
+
+/** Ingredient Styles */
+input.ingredient-input{
+  &.unit {
+    @include span-columns(2);
+  }
+
+  &.value {
+    @include span-columns(10);
+  }
+
+}
+
+/** Instruction Styles */
+.instructions {
+
+  .instruction {
+    @include span-columns(12);
+    overflow: auto;
+    height: auto;
+  }
+  .instruction-num {
+    @include span-columns(1);
+    font-size: 1em;
+    font-weight: 300;
+    color: $medium-gray;
+    text-align: right;
+    padding: 0 10px 10px 0;
+  }
+  textarea{
+    @include span-columns(11);
+  }
+}

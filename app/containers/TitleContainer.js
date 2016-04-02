@@ -24,7 +24,9 @@ let TitleContainer = ({ title, onTitleChange }) => {
   console.log(title);
   return (
     <div className="recipe-title">
+      <label htmlFor={'title'} > Title </label>
       <RecipeInput onChange={ (e) => onTitleChange('title', e.target.value) } value={ title.title } label={"title"} />
+      <label htmlFor={'title'} > Description </label>
       <RecipeTextArea onChange={ (e) => onTitleChange('description', e.target.value) } value={ title.description } label={"description"} />
     </div>
   )
