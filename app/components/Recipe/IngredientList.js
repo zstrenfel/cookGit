@@ -4,7 +4,6 @@ import IngredientInput from './IngredientInput';
 
 
 let IngredientList = ({ ingredients, units, onIngredientChange, onUnitChange }) => {
-  console.log('rendering ingredient list');
   return (
     <div className="ingredients">
     <label> Ingredients </label>
@@ -18,8 +17,8 @@ let IngredientList = ({ ingredients, units, onIngredientChange, onUnitChange }) 
               onUnitChange(key, e.target.value);
             }}
             key={key}
-            unit_value={units[key].value}
-            text_value={ingredients[key].value} />
+            unit_value={units[key]}
+            text_value={ingredients[key]} />
         })
     }
     </div>

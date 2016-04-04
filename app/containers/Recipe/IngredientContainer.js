@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import IngredientList from '../components/Recipe/IngredientList'
-import { ingredientChange, unitChange } from '../actions/RecipeActions'
+import IngredientList from '../../components/Recipe/IngredientList'
+import { ingredientChange, unitChange } from '../../actions/RecipeActions'
 
 const mapStateToProps = (state) => {
   return {

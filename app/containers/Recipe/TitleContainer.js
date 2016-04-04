@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { titleChange } from '../actions/RecipeActions'
-import RecipeInput from '../components/Recipe/RecipeInput'
-import RecipeTextArea from '../components/Recipe/RecipeTextArea'
+import { titleChange } from '../../actions/RecipeActions'
+import RecipeInput from '../../components/Recipe/RecipeInput'
+import RecipeTextArea from '../../components/Recipe/RecipeTextArea'
 
 // import FormTitle from '../components/Recipe/FormTitle'
 
@@ -21,7 +21,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 let TitleContainer = ({ title, onTitleChange }) => {
-  console.log(title);
   return (
     <div className="recipe-title">
       <label htmlFor={'title'} > Title </label>

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import recipes from './recipes'
-import instructions from './instructions'
-import title from './title'
-import ingredients from './ingredients'
-import units from './units'
+import recipes from './Recipe/recipes'
+import instructions from './Recipe/instructions'
+import title from './Recipe/title'
+import ingredients from './Recipe/ingredients'
+import units from './Recipe/units'
 
 const cookApp = combineReducers({
   recipes,

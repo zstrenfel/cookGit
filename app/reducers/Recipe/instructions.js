@@ -1,21 +1,21 @@
 
-let initialState = {"1":"", "2": "", "3": ""};
+let initialState = {"1":"", "2":"", "3":""};
 
-const ingredients = (state = initialState, action) => {
+const instructions = (state = initialState, action) => {
   switch(action.type) {
-    case 'ADD_INGREDIENT':
+    case 'ADD_INSTRUCTION':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'INGREDIENT_CHANGE':
+    case 'INSTRUCTION_CHANGE':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'RESET_INGREDIENTSS':
+    case 'RESET_INSTRUCTIONS':
       return initialState;
     default:
       return state;
   }
 }
 
-export default ingredients;
+export default instructions;

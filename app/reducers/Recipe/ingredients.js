@@ -1,21 +1,22 @@
 
-let initialState = {"1": "", "2": "", "3": ""};
+let initialState = {"1":"", "2": "", "3": ""};
 
-const units = (state = initialState, action) => {
+const ingredients = (state = initialState, action) => {
   switch(action.type) {
-    case 'ADD_UNIT':
+    case 'ADD_INGREDIENT':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'UNIT_CHANGE':
+    case 'INGREDIENT_CHANGE':
       return Object.assign({}, state, {
         [action.id.toString()]: action.text
       })
-    case 'RESET_UNITS':
+    case 'RESET_INGREDIENTS':
+      console.log('reset ingredients callsd');
       return initialState;
     default:
       return state;
   }
 }
 
-export default units;
+export default ingredients;

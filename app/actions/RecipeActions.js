@@ -1,11 +1,14 @@
 let recipeID = 0;
 
-export const addRecipe = (title, body) => {
+export const addRecipe = (title, body, ingredients, instructions, tags) => {
   return {
     type: 'CREATE_NEW_RECIPE',
     id: recipeID ++,
     title,
-    body
+    body,
+    ingredients,
+    instructions,
+    tags
   }
 }
 
@@ -40,7 +43,6 @@ export const titleChange = (label, text) => {
 }
 
 export const resetTitle = () => {
-  console.log('resetting title');
   return {
     type: 'RESET_TITLE'
   }
@@ -55,13 +57,19 @@ export const ingredientChange = (id, text) => {
 }
 
 export const addIngredient = (id, text="") => {
-  console.log('add ingredient called');
   return {
     type: 'ADD_INGREDIENT',
     id,
     text
   }
 }
+
+export const resetIngredients = () => {
+  return {
+    type: 'RESET_INGREDIENTS'
+  }
+}
+
 
 export const unitChange = (id, text) => {
   return {

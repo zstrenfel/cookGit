@@ -4,7 +4,10 @@ const recipe = (state, action) => {
       return {
         id: action.id,
         title: action.title,
-        body: action.body
+        body: action.body,
+        ingredients: action.ingredients,
+        instructions: action.instructions,
+        tags: action.tags
       }
     // case 'UPDATE_RECIPE':
     //   return {

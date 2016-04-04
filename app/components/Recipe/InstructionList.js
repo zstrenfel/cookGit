@@ -4,7 +4,6 @@ import RecipeTextArea from './RecipeTextArea';
 
 
 let InstructionList = ({ instructions, onInstructionChange }) => {
-  console.log('instructions', instructions);
   return (
     <div className="instructions">
     <label> Instructions </label>
